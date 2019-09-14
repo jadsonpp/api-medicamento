@@ -14,10 +14,9 @@ mongoose.connect(
     {useNewUrlParser: true}
 );
 
-//registra o models -> Usando o requireDir ele faz isso atomaticamente
+//registra o models -> Usando o requireDir ele faz isso automaticamente
 requireDir('./src/models/');
 
-const Product = mongoose.model('Product');
 
 // Res, resposta do backend.
 //Req, requisição.

@@ -1,14 +1,18 @@
 const express = require('express');
 const routes = express.Router();
-const ProductController = require('./controllers/ProductController');
+const MedicineController = require('./controllers/MedicineController');
+const PatientController = require('./controllers/PatientController');
 
-//rotas
-routes.get('/products',ProductController.index);
-routes.get('/products/:id',ProductController.show);
-
-routes.post('/products',ProductController.store);
-routes.delete('/products/:id',ProductController.destroy);
-routes.put('/products/:id',ProductController.update);
-
-
+//rotas medicines
+routes.get('/medicines',MedicineController.index);
+routes.get('/medicines/:id',MedicineController.show);
+routes.post('/medicines',MedicineController.store);
+routes.delete('/medicines/:id',MedicineController.destroy);
+routes.put('/medicines/:id',MedicineController.update);
+//routes patients
+routes.get('/patients',PatientController.index);
+routes.get('/patients/:id',PatientController.show);
+routes.post('/patients',PatientController.store);
+routes.delete('/patients/:id',PatientController.destroy);
+routes.put('/patients/:id',PatientController.update);
 module.exports = routes;
