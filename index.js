@@ -10,7 +10,7 @@ app.use(cors());
 //iniciando o data base.
 //se tiver user@password
 mongoose.connect(
-    'mongodb://localhost:27017/nodeapi',
+    'mongodb+srv://user:user123@cluster0-sks0r.mongodb.net/test?retryWrites=true&w=majority',
     {useNewUrlParser: true}
 );
 
@@ -26,4 +26,4 @@ requireDir('./src/models/');
 app.use('/api',require('./src/routes'));
 
 
-app.listen(process.env.PORT || 3000); // Ouvir a porta 3001.
+app.listen(process.env.PORT || "3000"); // Ouvir a porta 3001.
