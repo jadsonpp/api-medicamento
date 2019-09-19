@@ -18,12 +18,9 @@ mongoose.connect(
 requireDir('./src/models/');
 
 
-// Res, resposta do backend.
-//Req, requisição.
-
 
 //Rotas
 app.use('/api',require('./src/routes'));
 
 
-app.listen(process.env.PORT || "3000"); // Ouvir a porta 3001.
+app.listen(process.env.PORT || "3000"); // Ouvir a porta 3000.
