@@ -3,7 +3,7 @@ const mongoose = require('mongoose');
 const requireDir = require('require-dir');
 const cors = require('cors');  //permitir acesso externo.
 //Inicializando o App.
-const port = process.env.PORT || 3000;
+
 const app = express();
 app.use(express.json()); //permitir que envie dados no formato json pra app.
 app.use(cors());
@@ -24,4 +24,4 @@ requireDir('./src/models/');
 app.use('/api',require('./src/routes'));
 
 
-app.listen(port); // Ouvir a porta 3000.
+app.listen(process.env.PORT || 3000); // Ouvir a porta 3000.
