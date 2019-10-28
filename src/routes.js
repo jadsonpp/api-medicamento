@@ -6,7 +6,7 @@ const PatientController = require('./controllers/PatientController');
 //rotas medicines
 routes.get('/medicines',MedicineController.index);
 routes.get('/medicines/:id',MedicineController.show);
-routes.post('/medicines/post',MedicineController.store);
+routes.post('/medicines/',MedicineController.store);
 routes.delete('/medicines/:id',MedicineController.destroy);
 routes.put('/medicines/:id',MedicineController.update);
 //routes patients

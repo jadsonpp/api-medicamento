@@ -14,6 +14,7 @@ module.exports = {
 
     async store(req,res){
         const medicine = await Medicine.create(req.body);
+        console.log(medicine)
         return res.json(medicine);
     },
 
