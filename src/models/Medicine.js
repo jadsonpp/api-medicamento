@@ -3,31 +3,31 @@ const mongoose = require ('mongoose');
 const MedicineSchema = new mongoose.Schema({
     name: {
         type: String,
-        //required: true,
+        required: true,
     },
     // Quantidade
     amount: {
         type: Number,
-        //required: true,
+        required: true,
     },
     // Quantidade Minima
     minAmount: {
         type: Number,
-        //required: true,
+        required: true,
     },
     //Lote
     lot: {
         type: String,
-        //required: true,
+        required: true,
     },
     // Validade
     validity: {
         type: Date,
-        //required: true,
+        required: true,
     },
     description: {
         type: String,
-        //required: true,
+        required: true,
     },
 });
 //ProductSchema.plugin(mongoosePaginate);
