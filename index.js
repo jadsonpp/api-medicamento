@@ -25,4 +25,4 @@ requireDir('./src/models/');
 app.use('/api',require('./src/routes'));
 
 
-app.listen(process.env.PORT || 3000); // Ouvir a porta 3000.
+app.listen(process.env.PORT || 9001); // Ouvir a porta 3000.

@@ -1,5 +1,10 @@
 const mongoose = require('mongoose');
 const RetiradaSchema = new mongoose.Schema ({
+    
+    medicamentoID: {
+        type:String,
+        required: true,
+    },
     date: {
         type: Date,
         default: Date.now(),
