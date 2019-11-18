@@ -1,4 +1,8 @@
+<<<<<<< HEAD
 const Medicine = require('./aplication/MedicineApl.js');
+=======
+const Medicine = require('../aplication/MedicineApl.js');
+>>>>>>> 1fd38cc4c7f9d2837b3aad3e2569cabb45cb85ba
 
 module.exports = {
     async index(req,res){
