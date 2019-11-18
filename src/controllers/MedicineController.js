@@ -1,31 +1,23 @@
-const mongoose = require('mongoose');
-const Medicine = mongoose.model('Medicine');
+const Medicine = require('./aplication/MedicineApl.js');
 
 module.exports = {
     async index(req,res){
-        const medicines = await Medicine.find();
-        return res.json(medicines);
+        return Medicine.index(req,res);
     },
 
     async show(req,res){
-        const medicine = await Medicine.findById(req.params.id);
-        return res.json(medicine);
+        return Medicine.show(req,res);
     },
 
     async store(req,res){
-        const medicine = await Medicine.create(req.body);
-        console.log(medicine)
-        return res.json(medicine);
+        return Medicine.store(req,res);
     },
 
     async update(req,res){
-        const medicine = await Medicine.findByIdAndUpdate(req.params.id, req.body ,{new: true});
-        return res.json(medicine);  
+        return Medicine.update(req,res);  
     },
 
     async destroy(req,res){
-        await Medicine.findByIdAndRemove(req.params.id);
-        //retorna msg de deletado com sucesso sem conteudo.
-        return res.send();
+        return Medicine.destroy(req,res);
     }
 };

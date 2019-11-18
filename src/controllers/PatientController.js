@@ -1,30 +1,23 @@
-const mongoose = require('mongoose');
-const Patient = mongoose.model('Patient');
+const paciente = require('./aplication/PatientApl.js');
 
 module.exports = {
     async index(req,res){
-        const patients = await Patient.find();
-        return res.json(patients);
+        return paciente.index(req,res);
     },
 
     async show(req,res){
-        const patients = await Patient.findById(req.params.id);
-        return res.json(patients);
+        return paciente.show(req,res);
     },
 
     async store(req,res){
-        const patients = await Patient.create(req.body);
-        return res.json(patients);
+        return paciente.store(req,res);
     },
 
     async update(req,res){
-        const patients = await Patient.findByIdAndUpdate(req.params.id,req.body,{new: true});
-        return res.json(patients);  
+        return paciente.update(req,res);  
     },
 
     async destroy(req,res){
-        await Patient.findByIdAndRemove(req.params.id);
-        //retorna msg de deletado com sucesso sem conteudo.
-        return res.send();
+        return paciente.destroy(req,res);
     }
 };

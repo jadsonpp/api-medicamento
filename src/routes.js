@@ -2,17 +2,25 @@ const express = require('express');
 const routes = express.Router();
 const MedicineController = require('./controllers/MedicineController');
 const PatientController = require('./controllers/PatientController');
+const RetiradaController = require('./controllers/RetiradaController');
 
 //rotas medicines
-routes.get('/medicines',MedicineController.index);
-routes.get('/medicines/:id',MedicineController.show);
-routes.post('/medicines/',MedicineController.store);
-routes.delete('/medicines/:id',MedicineController.destroy);
-routes.put('/medicines/:id',MedicineController.update);
+routes.get('/medicines',MedicineApl.index);
+routes.get('/medicines/:id',MedicineApl.show);
+routes.post('/medicines/',MedicineApl.store);
+routes.delete('/medicines/:id',MedicineApl.destroy);
+routes.put('/medicines/:id',MedicineApl.update);
 //routes patients
-routes.get('/patients',PatientController.index);
-routes.get('/patients/:id',PatientController.show);
-routes.post('/patients',PatientController.store);
-routes.delete('/patients/:id',PatientController.destroy);
-routes.put('/patients/:id',PatientController.update);
+routes.get('/patients',PatientApl.index);
+routes.get('/patients/:id',PatientApl.show);
+routes.post('/patients',PatientApl.store);
+routes.delete('/patients/:id',PatientApl.destroy);
+routes.put('/patients/:id',PatientApl.update);
+//routes retirada
+routes.get('/retirada',RetiradaApl.index);
+routes.get('/retirada/:id',RetiradaApl.show);
+routes.post('/retirada',RetiradaApl.store);
+routes.delete('/retirada/:id',RetiradaApl.destroy);
+routes.put('/retirada/:id',RetiradaApl.update);
+
 module.exports = routes;
