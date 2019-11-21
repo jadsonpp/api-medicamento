@@ -1,7 +1,10 @@
 const mongoose = require('mongoose');
 const RetiradaSchema = new mongoose.Schema ({
-    
-    medicamentoID: {
+    cartaoSUS: {
+        type: String,
+        required: true,
+    },
+    nomeMedicamento: {
         type:String,
         required: true,
     },
